@@ -54,6 +54,5 @@ public class StudentAction extends SetRequest {
             this.setRequest("msg","登录失败，请检查用户名与密码");
             return "failure";
         }
-
     }
 }
