@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Spring">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../框架/spring-framework-4.3.2.RELEASE/libs" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../框架/spring-framework-4.3.2.RELEASE/libs" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../框架/spring-framework-4.3.2.RELEASE/libs" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../框架/spring-framework-4.3.2.RELEASE/libs" recursive="false" type="SOURCES" />
+  </library>
+</component>
