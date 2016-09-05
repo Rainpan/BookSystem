@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class class_teacher {
+public class course_teacher {
     private int ctId;
     private int claId;
     private int tcId;

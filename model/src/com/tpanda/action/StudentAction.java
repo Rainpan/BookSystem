@@ -1,7 +1,7 @@
 package com.tpanda.action;
 
-import com.tpanda.entity.Class;
-import com.tpanda.service.ClassService;
+import com.tpanda.entity.Course;
+import com.tpanda.service.CourseService;
 import com.tpanda.service.StudentService;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.ParentPackage;
@@ -26,9 +26,9 @@ public class StudentAction extends SetRequest {
     }
     
     @Autowired
-    private ClassService classService;
+    private CourseService classService;
 
-    public void setClassService(ClassService classService) {
+    public void setClassService(CourseService classService) {
         this.classService = classService;
     }
 
@@ -57,9 +57,14 @@ public class StudentAction extends SetRequest {
                 return "failure";
             }
         }
+        System.out.println("class前");
+        List lists = classService.studentToClass(3001);
+        System.out.println("class后");
+
         boolean b = studentService.login(name,pwd);
+        System.out.println("登录结束");
         if (b==true){
-            List<Class> list = classService.selectClass();
+            List<Course> list = classService.selectClass();
             this.setRequest("class",list);
             return SUCCESS;
         }else {

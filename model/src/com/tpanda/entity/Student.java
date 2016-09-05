@@ -13,6 +13,7 @@ public class Student {
     private String stuName;
     private String stuPwd;
     private String sex;
+    private int proId;
 
     @Id
     @Column(name = "stu_id")
@@ -51,5 +52,14 @@ public class Student {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    @Column(name = "pro_id")
+    public int getProId() {
+        return proId;
+    }
+
+    public void setProId(int proId) {
+        this.proId = proId;
     }
 }

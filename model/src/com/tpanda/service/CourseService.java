@@ -1,8 +1,8 @@
 package com.tpanda.service;
 
 
-import com.tpanda.dao.ClassDao;
-import com.tpanda.entity.Class;
+import com.tpanda.dao.CourseDao;
+import com.tpanda.entity.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,17 +10,22 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class ClassService {
+public class CourseService {
 
     @Autowired
-    private ClassDao classDao;
+    private CourseDao classDao;
 
-    public void setClassDao(ClassDao classDao) {
+    public void setClassDao(CourseDao classDao) {
         this.classDao = classDao;
     }
 
     @Transactional(readOnly = true)
-    public List<Class> selectClass(){
+    public List<Course> selectClass(){
         return classDao.selectClass();
+    }
+
+    @Transactional(readOnly = true)
+    public List studentToClass(int id){
+        return classDao.studentToClass(id);
     }
 }
