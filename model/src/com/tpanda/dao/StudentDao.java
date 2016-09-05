@@ -1,16 +1,17 @@
 package com.tpanda.dao;
 
-import com.tpanda.entity.Student;
-import org.hibernate.Criteria;
-import org.hibernate.Query;
+import com.tpanda.entity.Class;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 
 @Repository
-public class StudentDao implements personDao{
+public class StudentDao {
 
     @Autowired
     private SessionFactory sessionFactory;
