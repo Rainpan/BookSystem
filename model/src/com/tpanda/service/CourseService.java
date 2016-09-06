@@ -3,6 +3,7 @@ package com.tpanda.service;
 
 import com.tpanda.dao.CourseDao;
 import com.tpanda.entity.Course;
+import com.tpanda.entity.VStuSelectCourseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,7 +26,7 @@ public class CourseService {
     }
 
     @Transactional(readOnly = true)
-    public List studentToClass(int id){
+    public List<VStuSelectCourseEntity> studentToClass(int id){
         return classDao.studentToClass(id);
     }
 }

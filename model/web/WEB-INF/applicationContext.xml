@@ -28,11 +28,6 @@
                 <value>com.tpanda.entity</value>
             </list>
         </property>
-        <property name="hibernateProperties">
-            <value>
-                hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
-            </value>
-        </property>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
