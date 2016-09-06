@@ -16,9 +16,9 @@ public class StudentDao {
         this.sessionFactory = sessionFactory;
     }
 
-    public boolean login(String name, String pwd) {
+    public boolean login(int id, String pwd) {
         Session session = sessionFactory.getCurrentSession();
-        String stuPwd = (String) session.createQuery("select stuPwd from Student where stuId = :sid").setParameter("sid",Integer.parseInt(name)).uniqueResult();
+        String stuPwd = (String) session.createQuery("select stuPwd from Student where stuId = :sid").setParameter("sid",id).uniqueResult();
         if (pwd.equals(stuPwd)){
             return true;
         }

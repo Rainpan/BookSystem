@@ -16,7 +16,7 @@ public class StudentService {
     }
 
     @Transactional(readOnly = true)
-    public boolean login(String name,String pwd){
-        return studentDao.login(name,pwd);
+    public boolean login(int id,String pwd){
+        return studentDao.login(id,pwd);
     }
 }

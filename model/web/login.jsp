@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
         <title>学生选课系统</title>
-        <link rel="stylesheet" href="../styles/common.css"/>
+        <link rel="stylesheet" href="styles/common.css"/>
     </head>
     <body>
             <div class="page-content">
@@ -16,16 +16,25 @@
                         <legend>登录信息</legend>
                         <table class="formtable" style="width:50%">
                             <tr>
-                                <td>账号名:</td>
+                                <td>账号ID:</td>
                                 <td>
-                                    <input id="accountname" name="name"type="text" />
+                                    <input id="accountname" name="student.stuId"type="text" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>密码:</td>
                                 <td>
-                                    <input id="new" name="pwd" type="pwd" />
+                                    <input id="new" name="student.stuPwd" type="pwd" />
                                 </td>
+                            </tr>
+                            <tr>
+                            <td>选择保持时间</td>
+                            <td>
+                            <select name="type">
+                            <option value="1">学生</option>
+                            <option value="2">老师</option>
+                            <option value="3">管理员</option>
+                            </select><br>
                             </tr>
                             <tr>
                                 <td colspan="2" class="command">
@@ -33,6 +42,7 @@
                                 </td>
                             </tr>
                         </table>
+                        ${requestScope.msg}
                     </fieldset>
                 </form>
             </div>

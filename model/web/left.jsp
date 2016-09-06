@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <title>无标题文档</title>
-<link rel="stylesheet" type="text/css" href="../styles/common02.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/common02.css"/>
 </head>
 <body>
             <div class="page-sidebar">
@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <div class="sidebar-grouptitle">选课管理</div>
                     <ul class="sidebar-menu">
                         <li class="sidebar-menuitem"><a href="viewAllDepartment?code=view" target="main">查询课程</a></li>
-                        <li class="sidebar-menuitem"><a href="viewAllEmployeeServlet?code=approve" target="main">选课</a></li>
+                        <li class="sidebar-menuitem"><a href="selectCourse.action" target="main">选课</a></li>
                         <li class="sidebar-menuitem"><a href="searchemployees.jsp" target="main">查询选课结果</a></li>
                     </ul>
                 </div>              

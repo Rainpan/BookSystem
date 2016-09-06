@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <title>无标题文档</title>
- <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="styles/common.css"/>
 </head>
 
 <body>
@@ -17,10 +17,9 @@
               	 欢迎访问选课系统
             	</div>
             <div class="header-quicklink">
-               	 欢迎您，<strong>${sessionScope.username}</strong>
+               	 欢迎您，<strong>${sessionScope.name}</strong>
                 <a href="#">[修改密码]</a>
                 <a href="exitServlet" target="_top">[退出]</a>
-	        	<strong>系统访问次数${applicationScope.count}</strong>
 	        </div>
 	        </div>
 	</body>

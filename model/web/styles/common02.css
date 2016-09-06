@@ -1,19 +1,19 @@
-/*é€šç”¨æ ·å¼*/
+/*Í¨ÓÃÑùÊ½*/
 * {
-    font-family:å¯°î†¿è’‹é—†å‘´ç²¦, Arial;
-
+    font-family:å¾®è½¯é›…é»‘, Arial;
+   
     font-size:15.5px;
 }
-/*bodyçš„æ ·å¼*/
+/*bodyµÄÑùÊ½*/
 body{
-    background-color:#91E6F8;
+    background-color:lightgray;
 }
-/*é“¾æ¥çš„æ ·å¼*/
+/*Á´½ÓµÄÑùÊ½*/
 a{
     color:gray;
     text-decoration:none;
 }
-/*ä¼ªç±»*/
+/*Î±Àà*/
 a:hover{
     color:red;
     font-weight:bold;
@@ -60,15 +60,15 @@ h1, h2, h3 {
 }
 
 .page-sidebar{
-
-    text-align:left;
+	 
+	text-align:left;
     width:150px;
-
+   
 }
 
 .page-content{
     width:830px;
-
+    
 }
 
 
@@ -77,11 +77,11 @@ h1, h2, h3 {
     font-size:16px;
     font-weight:bold;
     cursor:pointer;
-
+	
 }
 
 .sidebar-menu{
-    letter-spacing:3px;
+	letter-spacing:3px;
     list-style:none;
     padding-left:20px;
 }
