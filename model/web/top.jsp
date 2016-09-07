@@ -1,5 +1,6 @@
+<%@ page import="com.tpanda.entity.table.Student" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -19,7 +20,7 @@
             <div class="header-quicklink">
                	 欢迎您，<strong>${sessionScope.student.stuName}</strong>
                 <a href="#">[修改密码]</a>
-                <a href="exitServlet" target="_top">[退出]</a>
+                <a href="" target="_top">[退出]</a>
 	        </div>
 	        </div>
 	</body>

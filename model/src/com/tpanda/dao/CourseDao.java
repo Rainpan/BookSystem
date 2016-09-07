@@ -36,6 +36,7 @@ public class CourseDao {
         return list;
     }
 
+    //增加选择的课程
     public void addCourse(int stuId,String[] course){
         Session session = sessionFactory.getCurrentSession();
         for (int i=0;i<course.length;i++){

@@ -1,19 +1,15 @@
-/*ͨ����ʽ*/
 * {
     font-family:微软雅黑, Arial;
-   
+
     font-size:15.5px;
 }
-/*body����ʽ*/
 body{
     background-color:lightgray;
 }
-/*���ӵ���ʽ*/
 a{
     color:gray;
     text-decoration:none;
 }
-/*α��*/
 a:hover{
     color:red;
     font-weight:bold;
@@ -60,30 +56,31 @@ h1, h2, h3 {
 }
 
 .page-sidebar{
-	 
-	text-align:left;
+
+    text-align:left;
     width:150px;
-   
+
 }
 
 .page-content{
     width:830px;
-    
+
 }
 
 
-.sidebar-grouptitle{
+.sidebar-grouptitle1,.sidebar-grouptitle2,.sidebar-grouptitle3{
     width:100%;
     font-size:16px;
     font-weight:bold;
     cursor:pointer;
-
 }
 
-.sidebar-menu{
-	letter-spacing:3px;
+.sidebar-menu1,.sidebar-menu2,.sidebar-menu3{
+    letter-spacing:3px;
     list-style:none;
     padding-left:20px;
+    color: #000;
+    display: none;
 }
 
 

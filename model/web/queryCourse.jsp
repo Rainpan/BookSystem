@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>查询已选课程</title>
     <link rel="stylesheet" type="text/css" href="styles/common03.css"/>
 </head>
 <body>

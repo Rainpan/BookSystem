@@ -17,7 +17,6 @@
                 <th>年龄</th>
                 <th>性别</th>
                 <th>专业</th>
-                <th>学分</th>
                 <th>学院</th>
             </tr>
             <s:iterator value="#request.student">
@@ -27,7 +26,7 @@
                     <th><s:property value="年龄"/></th>
                     <th><s:property value="性别"/></th>
                     <th><s:property value="专业"/></th>
-                    <th><s:property value="学分"/></th>
+                    <th><s:property value="学院"/></th>
                 </tr>
             </s:iterator>
         </table>
