@@ -1,4 +1,4 @@
-package com.tpanda.entity;
+package com.tpanda.entity.table;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Class {
+public class Course {
     private int claId;
     private String claName;
     private int claCredit;

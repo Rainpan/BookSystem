@@ -1,4 +1,4 @@
-package com.tpanda.entity;
+package com.tpanda.entity.table;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -25,7 +25,7 @@ public class Root {
         this.id = id;
     }
 
-    @Column(name = "user_id")
+    @Column(name = "user_name")
     public String getUserId() {
         return userId;
     }
