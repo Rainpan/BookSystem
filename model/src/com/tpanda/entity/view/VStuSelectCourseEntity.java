@@ -1,4 +1,4 @@
-package com.tpanda.entity;
+package com.tpanda.entity.view;
 
 import org.hibernate.annotations.GenericGenerator;
 

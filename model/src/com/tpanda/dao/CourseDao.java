@@ -1,12 +1,12 @@
 package com.tpanda.dao;
 
-import com.tpanda.entity.VStuSelectCourseEntity;
-import org.hibernate.Query;
+import com.tpanda.entity.view.VStuQueryCourseEntity;
+import com.tpanda.entity.view.VStuSelectCourseEntity;
+import com.tpanda.entity.table.course_student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import com.tpanda.entity.Course;
 
 import java.util.List;
 
@@ -20,12 +20,6 @@ public class CourseDao {
         this.sessionFactory = sessionFactory;
     }
 
-    //返回全部课程
-    @SuppressWarnings("unchecked")
-    public List<Course> selectClass(){
-        return sessionFactory.getCurrentSession().createCriteria(Course.class).list();
-    }
-
     //根据学生的学号返回能选的课程
     @SuppressWarnings("unchecked")
     public List<VStuSelectCourseEntity> studentToClass(int id){
@@ -36,8 +30,21 @@ public class CourseDao {
 
     //根据学生的学号返回已选的课程
     @SuppressWarnings("unchecked")
-    public List<Course> studentClass(int id){
-        return sessionFactory.getCurrentSession().createCriteria(Course.class).list();
+    public List<VStuQueryCourseEntity> studentCourse(int id){
+        Session session = sessionFactory.getCurrentSession();
+        List<VStuQueryCourseEntity> list = session.createQuery("from VStuQueryCourseEntity where 学号=?").setInteger(0,id).list();
+        return list;
+    }
+
+    public void addCourse(int stuId,String[] course){
+        Session session = sessionFactory.getCurrentSession();
+        for (int i=0;i<course.length;i++){
+            course_student cs = new course_student();
+            cs.setClaId(Integer.parseInt(course[i]));
+            cs.setStuId(stuId);
+            session.save(cs);
+            session.flush();
+        }
     }
 
 }

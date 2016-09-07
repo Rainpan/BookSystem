@@ -23,9 +23,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="sidebar-menugroup">
                     <div class="sidebar-grouptitle">选课管理</div>
                     <ul class="sidebar-menu">
-                        <li class="sidebar-menuitem"><a href="viewAllDepartment?code=view" target="main">查询课程</a></li>
-                        <li class="sidebar-menuitem"><a href="selectCourse.action" target="main">选课</a></li>
-                        <li class="sidebar-menuitem"><a href="searchemployees.jsp" target="main">查询选课结果</a></li>
+                        <li class="sidebar-menuitem"><a href="selectCourse.action" target="main">正选</a></li>
+                        <li class="sidebar-menuitem"><a href="queryCourse.action" target="main">正选结果</a></li>
+                        <li class="sidebar-menuitem"><a href="queryCourse.action" target="main">退选</a></li>
                     </ul>
                 </div>              
                 <div class="sidebar-menugroup">

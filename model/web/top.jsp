@@ -17,7 +17,7 @@
               	 欢迎访问选课系统
             	</div>
             <div class="header-quicklink">
-               	 欢迎您，<strong>${sessionScope.name}</strong>
+               	 欢迎您，<strong>${sessionScope.student.stuName}</strong>
                 <a href="#">[修改密码]</a>
                 <a href="exitServlet" target="_top">[退出]</a>
 	        </div>

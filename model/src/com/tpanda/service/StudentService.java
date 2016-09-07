@@ -1,9 +1,12 @@
 package com.tpanda.service;
 
 import com.tpanda.dao.StudentDao;
+import com.tpanda.entity.table.Student;
+import com.tpanda.entity.view.VStudent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 
 @Service
 public class StudentService {
@@ -15,8 +18,13 @@ public class StudentService {
         this.studentDao = studentDao;
     }
 
-    @Transactional(readOnly = true)
-    public boolean login(int id,String pwd){
+    @Transactional(readOnly = false)
+    public Student login(int id, String pwd){
         return studentDao.login(id,pwd);
+    }
+
+    @Transactional(readOnly = true)
+    public VStudent getInfor(int id){
+        return studentDao.getInfor(id);
     }
 }

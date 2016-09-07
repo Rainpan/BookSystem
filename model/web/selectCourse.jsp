@@ -15,7 +15,7 @@
 <div class="top"></div>
 <div class="contain">
 
-    <form action="">
+    <form action="sureCourse" method="post">
         <table class="listtable" border="1">
             <caption></caption>
 
@@ -36,16 +36,12 @@
                     <th><s:property value="课程号"/></th>
                     <th><s:property value="课程"/></th>
                     <th><s:property value="学分"/></th>
-                    <th>
-                        <input type="checkbox" name=<s:property value="课程号"/> />
-                    </th>
-
+                    <th><input type="checkbox" value=<s:property value="课程号"/> name="select" /></th>
                 </tr>
             </s:iterator>
         </table>
+        <input type="submit">
     </form>
-
-
 </div>
 </body>
 </html>

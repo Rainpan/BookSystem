@@ -1,6 +1,7 @@
 package com.tpanda.dao;
 
-import org.hibernate.Session;
+import com.tpanda.entity.table.Student;
+import com.tpanda.entity.view.VStudent;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -16,13 +17,14 @@ public class StudentDao {
         this.sessionFactory = sessionFactory;
     }
 
-    public boolean login(int id, String pwd) {
-        Session session = sessionFactory.getCurrentSession();
-        String stuPwd = (String) session.createQuery("select stuPwd from Student where stuId = :sid").setParameter("sid",id).uniqueResult();
-        if (pwd.equals(stuPwd)){
-            return true;
-        }
-        return false;
+    public Student login(int id, String pwd) {
+        Student student = (Student) sessionFactory.getCurrentSession().createQuery("from Student where stuId = :sid").setParameter("sid",id).uniqueResult();
+        if (pwd.equals(student.getStuPwd())){return student;}
+        return null;
+    }
+
+    public VStudent getInfor(int id){
+        return  (VStudent) sessionFactory.getCurrentSession().createQuery("from VStudent where 学号=?").setInteger(0,id).uniqueResult();
     }
 
 }
