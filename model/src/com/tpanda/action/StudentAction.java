@@ -46,6 +46,17 @@ public class StudentAction extends SetRequest {
     //学生登录
     @Action(value = "login",results = {@Result(name = "success",location = "/index.jsp"),@Result(name = "failure",location = "/login.jsp")})
     public String login(){
+        String type = ServletActionContext.getRequest().getParameter("type");
+        if (type.equals("1")){
+
+        }
+        if (type.equals("2")){
+
+        }
+        if (type.equals("3")){
+
+        }
+
         Student stu = studentService.login(student.getStuId(),student.getStuPwd());
         if (stu!=null){
             this.setSession("student",stu);

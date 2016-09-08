@@ -20,7 +20,7 @@ public class StudentDao {
     //登录
     public Student login(int id, String pwd) {
         Student student = (Student) sessionFactory.getCurrentSession().createQuery("from Student where stuId = :sid").setParameter("sid",id).uniqueResult();
-        if (pwd.equals(student.getStuPwd())){return student;}
+        if (student!=null && pwd.equals(student.getStuPwd())){return student;}
         return null;
     }
 
