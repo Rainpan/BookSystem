@@ -15,6 +15,7 @@ public class course_student {
     private int stuId;
     private int score;
     private Date scoreDate;
+    private int tcId;
 
     @Id
     @Column(name = "cs_id")
@@ -62,5 +63,14 @@ public class course_student {
 
     public void setScoreDate(Date scoreDate) {
         this.scoreDate = scoreDate;
+    }
+
+    @Column(name = "tc_id")
+    public int getTcId() {
+        return tcId;
+    }
+
+    public void setTcId(int tcId) {
+        this.tcId = tcId;
     }
 }

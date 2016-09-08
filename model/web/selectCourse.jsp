@@ -36,7 +36,7 @@
                     <th><s:property value="课程号"/></th>
                     <th><s:property value="课程"/></th>
                     <th><s:property value="学分"/></th>
-                    <th><input type="checkbox" value=<s:property value="课程号"/> name="select" /></th>
+                    <th><input type="checkbox" value=<s:property value="课程号"/>;<s:property value="教工号"/> name="select" /></th>
                 </tr>
             </s:iterator>
         </table>
