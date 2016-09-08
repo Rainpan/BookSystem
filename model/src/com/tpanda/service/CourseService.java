@@ -30,8 +30,13 @@ public class CourseService {
         return classDao.studentCourse(id);
     }
 
-    @Transactional(readOnly = true)
-    public void addCourse(int stuId,String[] course){
-        classDao.addCourse(stuId,course);
+    @Transactional(readOnly = false)
+    public void addCourse(int stuId,String[] course,String[] tcsId){
+        classDao.addCourse(stuId,course,tcsId);
+    }
+
+    @Transactional(readOnly = false)
+    public void deleteCourse(int stuId,String[] course){
+        classDao.deleteCourse(stuId,course);
     }
 }

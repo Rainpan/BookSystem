@@ -7,27 +7,25 @@
 </head>
 <body>
 <div class="contain">
-    <table class="listtable" border="1">
-        <tr class="listheader">
-            <th>课程编号</th>
-            <th>课程</th>
-            <th>学分</th>
-            <th>选择</th>
-        </tr>
-
-        <form action="">
-            <s:iterator value="#request.course">
-                <tr>
-                    <th><s:property value="课程编号"/></th>
-                    <th><s:property value="课程"/></th>
-                    <th><s:property value="学分"/></th>
-                    <th><input type="checkbox" value=<s:property value="课程编号"/> name="select" /></th>
-                </tr>
-            </s:iterator>
-            <input type="submit">
-        </form>
-
-    </table>
+    <form action="backCourse.action" method="post">
+        <table class="listtable" border="1">
+            <tr class="listheader">
+                <th>课程编号</th>
+                <th>课程</th>
+                <th>学分</th>
+                <th>选择</th>
+            </tr>
+                <s:iterator value="#request.course">
+                    <tr>
+                        <th><s:property value="课程编号"/></th>
+                        <th><s:property value="课程"/></th>
+                        <th><s:property value="学分"/></th>
+                        <th><input type="checkbox" value=<s:property value="课程编号"/> name="select" /></th>
+                    </tr>
+                </s:iterator>
+        </table>
+        <input type="submit" value="随便提交">
+    </form>
 </div>
 </body>
 </html>

@@ -11,12 +11,14 @@
         <tr class="listheader">
             <th>课程编号</th>
             <th>课程</th>
+            <th>老师</th>
             <th>学分</th>
         </tr>
         <s:iterator value="#request.course">
             <tr>
                 <th><s:property value="课程编号"/></th>
                 <th><s:property value="课程"/></th>
+                <th><s:property value="老师"/></th>
                 <th><s:property value="学分"/></th>
             </tr>
         </s:iterator>

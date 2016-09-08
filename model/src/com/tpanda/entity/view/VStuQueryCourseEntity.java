@@ -15,6 +15,8 @@ public class VStuQueryCourseEntity {
     private int 课程编号;
     private String 课程;
     private int 学分;
+    private String 老师;
+    private int 老师编号;
 
     @Id
     public int get编号() {
@@ -77,5 +79,23 @@ public class VStuQueryCourseEntity {
 
     public void set学分(int 学分) {
         this.学分 = 学分;
+    }
+
+    @Column(name = "老师")
+    public String get老师() {
+        return 老师;
+    }
+
+    public void set老师(String 老师) {
+        this.老师 = 老师;
+    }
+
+    @Column(name = "老师编号")
+    public int get老师编号() {
+        return 老师编号;
+    }
+
+    public void set老师编号(int 老师编号) {
+        this.老师编号 = 老师编号;
     }
 }

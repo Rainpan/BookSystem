@@ -41,7 +41,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <ul class="sidebar-menu2">
                         <li class="sidebar-menuitem"><a href="selectCourse.action" target="main">正选</a></li>
                         <li class="sidebar-menuitem"><a href="queryCourse.action" target="main">正选结果</a></li>
-                        <li class="sidebar-menuitem"><a href="queryCourse.action" target="main">退选</a></li>
+                        <li class="sidebar-menuitem"><a href="queryCourse.action?action=back" target="main">退选</a></li>
                     </ul>
                 </div>              
                 <div class="sidebar-menugroup">

@@ -46,6 +46,17 @@ public class StudentAction extends SetRequest {
     //学生登录
     @Action(value = "login",results = {@Result(name = "success",location = "/index.jsp"),@Result(name = "failure",location = "/login.jsp")})
     public String login(){
+        String type = ServletActionContext.getRequest().getParameter("type");
+        if (type.equals("1")){
+
+        }
+        if (type.equals("2")){
+
+        }
+        if (type.equals("3")){
+
+        }
+
         Student stu = studentService.login(student.getStuId(),student.getStuPwd());
         if (stu!=null){
             this.setSession("student",stu);
@@ -66,22 +77,47 @@ public class StudentAction extends SetRequest {
     }
 
     //查询已选课程
-    @Action(value = "queryCourse",results = {@Result(name = "success",location = "/queryCourse.jsp")})
+    @Action(value = "queryCourse",results = {@Result(name = "success",location = "/queryCourse.jsp"),@Result(name = "back",location = "/backCourse.jsp")})
     public String QueryCourse(){
         List<VStuQueryCourseEntity> list = classService.studentCourse(((Student)this.getSession("student")).getStuId());
         this.setRequest("course",list);
+
+        if ("back".equals(ServletActionContext.getRequest().getParameter("action"))) return "back";
+
         return SUCCESS;
     }
 
     //选课
     @Action(value = "sureCourse",results = {@Result(name = "success",location = "/01.html"),@Result(name = "failure",location = "/01.html")})
     public String SureCourse(){
+        String[] parameters = ServletActionContext.getRequest().getParameterValues("select");
+        if (parameters==null){
+            return "failure";
+        }
+
+        String[] courses = new String[parameters.length];
+        String[] tcsId = new String[parameters.length];
+        for (int i = 0; i < parameters.length; i++) {
+            String[] str = parameters[i].split(";");
+            courses[i]=str[0];
+            tcsId[i]=str[1];
+        }
+
+
+        int stuId = ((Student)this.getSession("student")).getStuId();
+        classService.addCourse(stuId,courses,tcsId);
+        return SUCCESS;
+    }
+
+    //退选课程
+    @Action(value = "backCourse",results = {@Result(name = "success",location = "/01.html"),@Result(name = "failure",location = "/01.html")})
+    public String deleteCourse(){
         String[] course = ServletActionContext.getRequest().getParameterValues("select");
         if (course==null){
             return "failure";
         }
         int stuId = ((Student)this.getSession("student")).getStuId();
-        classService.addCourse(stuId,course);
+        classService.deleteCourse(stuId,course);
         return SUCCESS;
     }
 
