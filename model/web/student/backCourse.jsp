@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>查询已选课程</title>
-    <link rel="stylesheet" type="text/css" href="styles/common03.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/common03.css"/>
 </head>
 <body>
 <div class="contain">

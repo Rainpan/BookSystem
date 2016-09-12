@@ -9,8 +9,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <title>无标题文档</title>
-    <script type="text/javascript" src="jquery/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/common04.css"/>
+    <script type="text/javascript" src="/jquery/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styles/common04.css"/>
     <script type="text/javascript">
         $(function () {
             $(".sidebar-grouptitle1").click(function () {
@@ -32,22 +32,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="sidebar-menugroup">
                     <div class="sidebar-grouptitle1">个人中心</div>
                     <ul class="sidebar-menu1">
-                        <li class="sidebar-menuitem"><a href="queryInfor.action" target="main">个人信息管理</a></li>
+                        <li class="sidebar-menuitem"><a href="queryTcInfor.action" target="main">个人信息管理</a></li>
                     </ul>
                 </div>
               
                 <div class="sidebar-menugroup">
-                    <div class="sidebar-grouptitle2">选课管理</div>
+                    <div class="sidebar-grouptitle2">基本功能</div>
                     <ul class="sidebar-menu2">
-                        <li class="sidebar-menuitem"><a href="selectCourse.action" target="main">正选</a></li>
-                        <li class="sidebar-menuitem"><a href="queryCourse.action" target="main">正选结果</a></li>
-                        <li class="sidebar-menuitem"><a href="queryCourse.action?action=back" target="main">退选</a></li>
+                        <li class="sidebar-menuitem"><a href="queryOfStudent.action" target="main">课程学生查询</a></li>
+                        <li class="sidebar-menuitem"><a href="queryCourse.action" target="main">学生信息导入</a></li>
                     </ul>
                 </div>              
                 <div class="sidebar-menugroup">
                     <div class="sidebar-grouptitle3">意见</div>
                     <ul class="sidebar-menu3">
-                        <li class="sidebar-menuitem"><a href="addmeetingroom.jsp" target="main">管理员反馈</a></li>
+                        <li class="sidebar-menuitem"><a href="/Suggestion.html" target="main">管理员反馈</a></li>
                     </ul>
                 </div>
             </div>

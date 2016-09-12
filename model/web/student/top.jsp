@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <title>无标题文档</title>
-    <link rel="stylesheet" href="styles/common.css"/>
+    <link rel="stylesheet" href="/styles/common.css"/>
 </head>
 
 <body>
@@ -17,10 +17,10 @@
             <div class="header-title">
               	 欢迎访问选课系统
             	</div>
-            <div class="header-quicklink">
+            <div class="header-uicklink">
                	 欢迎您，<strong>${sessionScope.student.stuName}</strong>
-                <a href="#">[修改密码]</a>
-                <a href="" target="_top">[退出]</a>
+                <a href="">[修改密码]</a>
+                <a href="/login.jsp" target="_parent">[退出]</a>
 	        </div>
 	        </div>
 	</body>

@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>选择课程</title>
-    <link rel="stylesheet" type="text/css" href="styles/common03.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/common03.css"/>
     <style type="text/css">
         td{
             height:30px;

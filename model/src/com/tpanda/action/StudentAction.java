@@ -43,32 +43,8 @@ public class StudentAction extends SetRequest {
         this.student = student;
     }
 
-    //学生登录
-    @Action(value = "login",results = {@Result(name = "success",location = "/index.jsp"),@Result(name = "failure",location = "/login.jsp")})
-    public String login(){
-        String type = ServletActionContext.getRequest().getParameter("type");
-        if (type.equals("1")){
-
-        }
-        if (type.equals("2")){
-
-        }
-        if (type.equals("3")){
-
-        }
-
-        Student stu = studentService.login(student.getStuId(),student.getStuPwd());
-        if (stu!=null){
-            this.setSession("student",stu);
-            return SUCCESS;
-        }else {
-            this.setRequest("msg","登录失败，请检查用户名与密码");
-            return "failure";
-        }
-    }
-
     //查询可以选的课程
-    @Action(value = "selectCourse",results = {@Result(name = "success",location = "/selectCourse.jsp"),@Result(name = "failure",location = "/index.jsp")})
+    @Action(value = "selectCourse",results = {@Result(name = "success",location = "/student/selectCourse.jsp"),@Result(name = "failure",location = "/student/index.jsp")})
     public String selectCourse(){
         int id = ((Student) this.getSession("student")).getStuId();
         List<VStuSelectCourseEntity> list = classService.studentToClass(id);
@@ -77,7 +53,7 @@ public class StudentAction extends SetRequest {
     }
 
     //查询已选课程
-    @Action(value = "queryCourse",results = {@Result(name = "success",location = "/queryCourse.jsp"),@Result(name = "back",location = "/backCourse.jsp")})
+    @Action(value = "queryCourse",results = {@Result(name = "success",location = "/student/queryCourse.jsp"),@Result(name = "back",location = "/student/backCourse.jsp")})
     public String QueryCourse(){
         List<VStuQueryCourseEntity> list = classService.studentCourse(((Student)this.getSession("student")).getStuId());
         this.setRequest("course",list);
@@ -88,7 +64,7 @@ public class StudentAction extends SetRequest {
     }
 
     //选课
-    @Action(value = "sureCourse",results = {@Result(name = "success",location = "/01.html"),@Result(name = "failure",location = "/01.html")})
+    @Action(value = "sureCourse",results = {@Result(name = "success",location = "/student/01.html"),@Result(name = "failure",location = "/student/01.html")})
     public String SureCourse(){
         String[] parameters = ServletActionContext.getRequest().getParameterValues("select");
         if (parameters==null){
@@ -110,7 +86,7 @@ public class StudentAction extends SetRequest {
     }
 
     //退选课程
-    @Action(value = "backCourse",results = {@Result(name = "success",location = "/01.html"),@Result(name = "failure",location = "/01.html")})
+    @Action(value = "backCourse",results = {@Result(name = "success",location = "/student/01.html"),@Result(name = "failure",location = "/student/01.html")})
     public String deleteCourse(){
         String[] course = ServletActionContext.getRequest().getParameterValues("select");
         if (course==null){
@@ -122,7 +98,7 @@ public class StudentAction extends SetRequest {
     }
 
     //查询个人信息
-    @Action(value = "queryInfor",results = {@Result(name = "success",location = "/stuInfor.jsp")})
+    @Action(value = "queryStuInfor",results = {@Result(name = "success",location = "/student/stuInfor.jsp")})
     public String getInfor(){
         VStudent student = studentService.getInfor(((Student)this.getSession("student")).getStuId());
         this.setRequest("student",student);

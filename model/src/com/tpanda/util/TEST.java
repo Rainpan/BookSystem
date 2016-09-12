@@ -6,6 +6,7 @@ public class TEST {
     public static void main(String[] args) {
         new TEST().dir(new File("E:\\picture"));
         System.out.println((int)3.8);
+        System.out.println(0.25*76+0.05*98+80*0.15+95*0.05+79*0.2+0.05*95+0.05*90);
     }
 
     public void dir(File fileDir){

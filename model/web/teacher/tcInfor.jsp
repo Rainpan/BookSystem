@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>学生信息</title>
-    <link rel="stylesheet" type="text/css" href="styles/common03.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/common03.css"/>
 </head>
 <body bgcolor="#d3d3d3">
 <div class="contain">
@@ -12,16 +12,16 @@
             <caption></caption>
 
             <tr class="listheader">
-                <th>学号</th>
+                <th>教工编号</th>
                 <th>姓名</th>
                 <th>年龄</th>
                 <th>性别</th>
                 <th>专业</th>
                 <th>学院</th>
             </tr>
-            <s:iterator value="#request.student">
+            <s:iterator value="#request.teacher">
                 <tr>
-                    <th><s:property value="学号"/></th>
+                    <th><s:property value="教工编号"/></th>
                     <th><s:property value="姓名"/></th>
                     <th><s:property value="年龄"/></th>
                     <th><s:property value="性别"/></th>

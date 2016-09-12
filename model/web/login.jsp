@@ -18,17 +18,17 @@
                             <tr>
                                 <td>账号ID:</td>
                                 <td>
-                                    <input id="accountname" name="student.stuId"type="text" />
+                                    <input id="accountname" name="id"type="text" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>密码:</td>
                                 <td>
-                                    <input id="new" name="student.stuPwd" type="pwd" />
+                                    <input id="new" name="pwd" type="password" />
                                 </td>
                             </tr>
                             <tr>
-                            <td>选择保持时间</td>
+                            <td>选择登录人员属性:</td>
                             <td>
                             <select name="type">
                             <option value="1">学生</option>
