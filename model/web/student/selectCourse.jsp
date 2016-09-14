@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>选择课程</title>
-    <link rel="stylesheet" type="text/css" href="styles/common03.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/common03.css"/>
     <style type="text/css">
         td{
             height:30px;
@@ -20,7 +20,6 @@
             <caption></caption>
 
             <tr class="listheader">
-                <th>专业</th>
                 <th>教工号</th>
                 <th>老师</th>
                 <th>课程号</th>
@@ -30,7 +29,6 @@
             </tr>
             <s:iterator value="#request.course">
                 <tr>
-                    <th><s:property value="专业"/></th>
                     <th><s:property value="教工号"/></th>
                     <th><s:property value="老师"/></th>
                     <th><s:property value="课程号"/></th>

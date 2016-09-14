@@ -18,7 +18,7 @@ a{
 
 a:hover{
     color:red;
-    font-weight:bold;
+    /*font-weight:bold;*/
     text-decoration:none;
 }
 
@@ -84,6 +84,7 @@ h1, h2, h3 {
 .page-header .header-quicklink{
     float:right;
     padding-top:40px;
+    padding-right: 10px;;
 }
 
 .page-body{
