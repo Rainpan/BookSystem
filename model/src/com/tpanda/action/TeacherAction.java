@@ -39,7 +39,6 @@ public class TeacherAction extends SetRequest{
         VTeacher teacher = teacherService.getInfor(((Teacher)this.getSession("teacher")).getTcId());
         this.setRequest("teacher",teacher);
         return SUCCESS;
-
     }
 
     //获取老师教的课程的学生

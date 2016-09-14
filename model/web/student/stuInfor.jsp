@@ -11,23 +11,41 @@
         <table class="listtable" border="1">
             <caption></caption>
 
-            <tr class="listheader">
+            <s:iterator value="#request.student">
+
+                <tr class="listheader">
+                    <th>学号</th>
+                    <th><s:property value="学号"/></th>
+                </tr>
+                <tr class="listheader">
+                    <th>姓名</th>
+                    <th><s:property value="姓名"/></th>
+                </tr>
+                <tr class="listheader">
+                    <th>年龄</th>
+                    <th><s:property value="年龄"/></th>
+                </tr>
+                <tr class="listheader">
+                    <th>性别</th>
+                    <th><s:property value="性别"/></th>
+                </tr>
+                <tr class="listheader">
+                    <th>专业</th>
+                    <th><s:property value="专业"/></th>
+
+                </tr>
+                <tr class="listheader">
+                    <th>专业</th>
+                    <th><s:property value="学院"/></th>
+                </tr>
+<%--            <tr class="listheader">
                 <th>学号</th>
                 <th>姓名</th>
                 <th>年龄</th>
                 <th>性别</th>
                 <th>专业</th>
                 <th>学院</th>
-            </tr>
-            <s:iterator value="#request.student">
-                <tr>
-                    <th><s:property value="学号"/></th>
-                    <th><s:property value="姓名"/></th>
-                    <th><s:property value="年龄"/></th>
-                    <th><s:property value="性别"/></th>
-                    <th><s:property value="专业"/></th>
-                    <th><s:property value="学院"/></th>
-                </tr>
+            </tr>--%>
             </s:iterator>
         </table>
     </div>

@@ -13,7 +13,9 @@ import org.apache.struts2.convention.annotation.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Controller
 @ParentPackage("struts-default")
@@ -78,7 +80,6 @@ public class StudentAction extends SetRequest {
             courses[i]=str[0];
             tcsId[i]=str[1];
         }
-
 
         int stuId = ((Student)this.getSession("student")).getStuId();
         classService.addCourse(stuId,courses,tcsId);

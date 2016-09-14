@@ -22,6 +22,6 @@
                 <a href="">[修改密码]</a>
                 <a href="/login.jsp" target="_parent">[退出]</a>
 	        </div>
-	        </div>
+  </div>
 	</body>
 </html>

@@ -9,8 +9,6 @@
 <div class="contain">
     <table class="listtable" border="1">
         <tr class="listheader">
-            <th>老师编号</th>
-            <th>老师名字</th>
             <th>课程编号</th>
             <th>课程名字</th>
             <th>学生学号</th>
@@ -19,8 +17,6 @@
         </tr>
         <s:iterator value="#request.ofStu">
             <tr>
-                <th><s:property value="老师编号"/></th>
-                <th><s:property value="老师名字"/></th>
                 <th><s:property value="课程编号"/></th>
                 <th><s:property value="课程名字"/></th>
                 <th><s:property value="学生学号"/></th>
